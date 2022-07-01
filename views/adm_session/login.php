@@ -1,4 +1,6 @@
-<?php /** @var gamboamartin\controllers\controlador_adm_session $controlador */ ?>
+<?php /** @var gamboamartin\controllers\controlador_adm_session $controlador */
+
+use config\views; ?>
 <?php
 if($controlador->existe_msj){
     ?>
@@ -26,7 +28,7 @@ if($controlador->existe_msj){
             <h2 class="text-center mt-5 titulo">¡Hola!</h2>
 
             <div class="text-center">
-                <img src="assets/img/user-logo.jpeg" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                <img src="<?php echo (new views())->url_assets; ?>img/user-logo.jpeg" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
                      width="100px" alt="profile">
             </div>
             <div class="col-md-12"></div>
@@ -49,9 +51,9 @@ if($controlador->existe_msj){
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6" align="left"><img src="assets/img/URA_LOGO_BLANCO.png" class="" alt="" width="30%" height="auto"></div>
+            <div class="col-md-6" align="left"><img src="<?php echo (new views())->url_assets; ?>img/URA_LOGO_BLANCO.png" class="" alt="" width="30%" height="auto"></div>
 
-            <div class="col-md-6" align="right"><img src="assets/img/logo_PNG_BLANCO.png" class="" alt="" width="30%" height="auto"></div>
+            <div class="col-md-6" align="right"><img src="<?php echo (new views())->url_assets; ?>img/logo_PNG_BLANCO.png" class="" alt="" width="30%" height="auto"></div>
         </div>
     </div>
 
