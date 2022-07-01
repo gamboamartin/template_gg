@@ -1,5 +1,6 @@
+<?php use config\views; ?>
 body {
-    background-image: url(img/background.jpg);
+    background-image: url(<?php echo (new views())->url_assets; ?>img/background.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,7 +10,7 @@ body {
 
 .titulo{
     font-family: 'Gotham Bold';
-    src: url('fonts/Gotham-Bold.otf');
+    src: url('<?php echo (new views())->url_assets; ?>fonts/Gotham-Bold.otf');
     font-style: normal;
     font-weight: bold;
     font-size: 50px;
@@ -26,7 +27,7 @@ body {
     color: #001588 !important;
     opacity: 1;
     font-family: 'Gotham Medium';
-    src: url('fonts/Gotham-Medium.otf');
+    src: url('<?php echo (new views())->url_assets; ?>fonts/Gotham-Medium.otf');
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
