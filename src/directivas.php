@@ -138,6 +138,12 @@ class directivas extends \gamboamartin\template\directivas {
         return "<div class='control-group col-sm-$cols'>$html</div>";
     }
 
+    /**
+     * CAMBIAR A HTML
+     * @param string $html
+     * @param string $label
+     * @return string
+     */
     private function div_label(string $html, string $label): string
     {
         return $label."<div class='controls'>$html</div>";
@@ -362,6 +368,7 @@ class directivas extends \gamboamartin\template\directivas {
     }
 
     /**
+     * SE QUEDA
      * Genera el label de in input para ser mostrado en el front
      * @version 0.37.5
      * @param string $name Nombre del input
