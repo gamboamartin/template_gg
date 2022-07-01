@@ -1,47 +1,58 @@
-<?php /** @var controllers\controlador_adm_session $controlador */ ?>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="top-title">
-                <ul class="breadcrumb">
-                    <li class="item"><a href="index.php"> Inicio </a></li>
-                    <li class="item"> Login</li>
-                </ul>
-                <h1 class="h-side-title page-title page-title-big text-color-primary">Iniciar Sesión</h1>
-            </div> <!-- /. content-header -->
-            <!-- /. widget-AVAILABLE PACKAGES -->
-            <div class="row-cols-12">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-6">
-                    <div class="widget  widget-box box-container widget-form form-main" id="form">
-                        <div class="widget-header">
-                            <h2>Iniciar Sesión</h2>
-                        </div>
-                        <form method="post" action="./index.php?seccion=adm_session&accion=loguea" class="form-additional">
-                            <div class="control-group">
-                                <label class="control-label" for="inputUsername2">Nombre de usuario</label>
-                                <div class="controls">
-                                    <input type="text" name="user" value="" class="form-control" id="inputUsername2" placeholder="Nombre de usuario" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="inputPassword1">Contraseña</label>
-                                <div class="controls">
-                                    <input type="password" name="password" value="" class="form-control" id="inputPassword1" placeholder="Contraseña" />
-                                </div>
-                            </div>
-
-                            <div class="control-group">
-                                <div class="controls">
-                                    <button type="submit" class="btn btn-danger">Iniciar Sesión</button>
-                                    <button type="reset" class="btn btn-default">Limpiar</button><br>
-                                    <a href="#"><em>¿Olvidaste tu contraseña?</em></a>
-                                </div>
-                            </div>
-                        </form>
-                    </div><!-- /.widget-form-->
-                </div>
-            </div>
-        </div><!-- /.center-content -->
+<?php /** @var gamboamartin\controllers\controlador_adm_session $controlador */ ?>
+<?php
+if($controlador->existe_msj){
+    ?>
+    <div class="alert alert-danger alert-dismissible fade show font_regular col-md-4 offset-4 pc info mt-4 animate__animated animate__fadeIn"  role="alert">
+        <?php echo $controlador->mensaje_html; ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+
+    <!--<div class="alert alert-danger alert-dismissible fade show font_regular col-md-12 mobile info" role="alert">
+    <?php echo $controlador->mensaje_html; ?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>-->
+    <?php
+}
+?>
+
+<div class="col-md-12 txt_centrado">
+
+</div>
+<div class="container">
+    <form method="post" action="./index.php?seccion=adm_session&accion=loguea" class="formulario">
+        <div class="row justify-content-center crea-form">
+            <div class="col-sm-3  negro_menu alto-medio"></div>
+            <div class="col-md-12"></div>
+            <h2 class="text-center mt-5 titulo">¡Hola!</h2>
+
+            <div class="text-center">
+                <img src="img/user-logo.jpeg" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                     width="100px" alt="profile">
+            </div>
+            <div class="col-md-12"></div>
+            <div class="col-sm-3 mb-2  form-template ">
+                <input type="text" class="form-control input-form input-style input" id="user" name ='user'
+                       placeholder="Usuario"  required>
+            </div>
+            <div class="col-md-12"></div>
+            <div class="col-sm-3 mb-2 form-template">
+                <input type="password" class="form-control input-form input-style input" id="password" name ='password'
+                       placeholder="Contraseña" required>
+            </div>
+            <div class="col-md-12"></div>
+
+            <div class="text-center col-2 m-4">
+                <button type="submit" class="btn btn-light px-5 mb-5 w-100 input">Login</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" align="left"><img src="img/URA_LOGO_BLANCO.png" class="" alt="" width="30%" height="auto"></div>
+
+            <div class="col-md-6" align="right"><img src="img/logo_PNG_BLANCO.png" class="" alt="" width="30%" height="auto"></div>
+        </div>
+    </div>
+
 </div>
