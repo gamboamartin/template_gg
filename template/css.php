@@ -1,5 +1,4 @@
-<?php use config\generales;
-use config\views; ?>
+<?php use config\views; ?>
 <link rel="stylesheet" href="<?php echo (new views())->url_assets; ?>node_modules/jquery-ui-dist/jquery-ui.css">
 <link rel="stylesheet" href="<?php echo (new views())->url_assets; ?>node_modules/bootstrap/dist/css/bootstrap.css">
 <link rel="stylesheet" href="<?php echo (new views())->url_assets; ?>node_modules/bootstrap/dist/css/bootstrap-grid.css">
