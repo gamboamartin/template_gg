@@ -27,8 +27,6 @@ class directivasTest extends test {
 
     }
 
-
-
     /**
      * @throws JsonException
      */
@@ -52,26 +50,7 @@ class directivasTest extends test {
         errores::$error = false;
     }
 
-    /**
-     * @throws JsonException
-     */
-    #[NoReturn] public function test_div_group(): void
-    {
-        errores::$error = false;
-        $html = new directivas();
-        $html = new liberator($html);
-        $_GET['session_id'] = 1;
-        $cols = 1;
-        $html_txt = '';
 
-
-        $resultado = $html->div_group($cols, $html_txt);
-        $this->assertIsString($resultado);
-        $this->assertNotTrue(errores::$error);
-        $this->assertEquals("<div class='control-group col-sm-1'></div>", $resultado);
-
-        errores::$error = false;
-    }
 
     /**
      * @throws JsonException
