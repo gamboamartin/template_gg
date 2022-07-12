@@ -217,7 +217,7 @@ class directivas extends \gamboamartin\template\directivas {
      * @param bool $value_vacio Para altas en caso de que sea vacio o no existe el key
      * @return array|string
      */
-    private function input_text_required(bool $disable, string $name, string $place_holder, stdClass $row_upd,
+    public function input_text_required(bool $disable, string $name, string $place_holder, stdClass $row_upd,
                                          bool $value_vacio ): array|string
     {
 
@@ -283,7 +283,5 @@ class directivas extends \gamboamartin\template\directivas {
         }
         return $alert_warning;
     }
-
-
 
 }
